@@ -78,7 +78,7 @@ Material:
       second: 0.5
     - first:
         name: _Cuts
-      second: 7
+      second: 2
     - first:
         name: _DetailNormalMapScale
       second: 1

@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: CelShadingForward
-  m_Shader: {fileID: 4800000, guid: ad36a1f7628f5cc41aa80941fd287224, type: 3}
+  m_Shader: {fileID: 4800000, guid: be37f3410ee46494faa9bd7e0d5967d6, type: 3}
   m_ShaderKeywords: _EMISSION
   m_LightmapFlags: 1
   m_CustomRenderQueue: -1
@@ -69,6 +69,12 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - first:
+        name: _SpecGlossMap
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
         name: _BumpScale
@@ -76,9 +82,6 @@ Material:
     - first:
         name: _Cutoff
       second: 0.5
-    - first:
-        name: _Cuts
-      second: 5
     - first:
         name: _DetailNormalMapScale
       second: 1
@@ -107,9 +110,6 @@ Material:
         name: _Parallax
       second: 0.02
     - first:
-        name: _Passes
-      second: 1
-    - first:
         name: _SmoothnessTextureChannel
       second: 0
     - first:
@@ -131,3 +131,6 @@ Material:
     - first:
         name: _EmissionColor
       second: {r: 0, g: 0, b: 0, a: 1}
+    - first:
+        name: _SpecColor
+      second: {r: 0.2, g: 0.2, b: 0.2, a: 1}

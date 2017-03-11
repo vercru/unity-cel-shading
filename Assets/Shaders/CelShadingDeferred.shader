@@ -34,7 +34,7 @@
 			#include "UnityStandardUtils.cginc"
 			#include "UnityGBuffer.cginc"
 			#include "UnityStandardBRDF.cginc"
-			#include "CustomBRDF.cginc"
+			#include "CelBRDF.cginc"
 
 			sampler2D _CameraGBufferTexture0;
 			sampler2D _CameraGBufferTexture1;
@@ -65,7 +65,7 @@
 				ind.diffuse = 0;
 				ind.specular = 0;
 
-				half4 res = BRDF2_Custom_PBS(data.diffuseColor, data.specularColor, oneMinusReflectivity, data.smoothness, data.normalWorld, -eyeVec, light, ind);
+				half4 res = CEL_BRDF_PBS(data.diffuseColor, data.specularColor, oneMinusReflectivity, data.smoothness, data.normalWorld, -eyeVec, light, ind);
 
 				return res;
 			}
@@ -134,5 +134,5 @@
 			ENDCG
 		}
 	}
-	Fallback "Custom/CelShadingForward"
+	Fallback "Standard"
 }

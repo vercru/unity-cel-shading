@@ -9,7 +9,7 @@
 
 	SubShader
 	{
-		Tags{ "RenderType" = "Opaque" }
+		Tags { "RenderType"="Opaque" }
 		LOD 200
 
 		CGPROGRAM
@@ -18,7 +18,7 @@
 
 		int _Cuts;
 
-		half4 LightingCutCel(SurfaceOutput so, half3 lDir, half attn)
+		inline half4 LightingCutCel(SurfaceOutput so, half3 lDir, half attn)
 		{
 			half nl = dot(so.Normal, lDir);
 			nl = clamp(ceil(nl * _Cuts) / _Cuts, 0, 1);
@@ -45,5 +45,5 @@
 		}
 		ENDCG
 	}
-	FallBack "Diffuse"
+	FallBack "Standard"
 }
